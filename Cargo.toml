@@ -1,0 +1,32 @@
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Honza Kvoch <kvochj@gmail.com>"]
+categories = ["memory-management", "no-std", "no-std::no-alloc"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/hkvoch/slobster"
+readme = "README.md"
+rust-version = "1.90"
+description = "Fast memory allocator based on slabs"
+keywords = ["memory", "allocator", "slab"]
+
+[workspace.dependencies]
+libc = { version = "0.2.183" }
+rstest = { version = "0.26.1" }
+cfg-if = { version = "1.0.4" }
+likely_stable = { version = "0.1.3" }
+derive_more = { version = "2.1.1" }
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+debug = true
+
+[profile.bench]
+lto = "fat"
+codegen-units = 1
+debug = true

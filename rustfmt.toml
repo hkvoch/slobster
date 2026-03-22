@@ -1,0 +1,13 @@
+fn_single_line = true
+hard_tabs = true
+imports_granularity = "Module"
+match_arm_leading_pipes = "Always"
+max_width = 120
+merge_derives = true
+newline_style = "Unix"
+short_array_element_width_threshold = 50
+use_field_init_shorthand = true
+use_try_shorthand = true
+where_single_line = true
+blank_lines_lower_bound = 0
+blank_lines_upper_bound = 1

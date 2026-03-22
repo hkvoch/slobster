@@ -1,0 +1,26 @@
+[package]
+name = "slobster-bench"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+categories.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+rust-version.workspace = true
+description.workspace = true
+keywords.workspace = true
+
+[[bench]]
+harness = false
+name = "main"
+
+[dependencies]
+criterion = { version = "0.8.2" }
+rand = { version = "0.10.0" }
+slab = { version = "0.4.12" }
+slabbin = { version = "1.2.0" }
+slobster = { path = "../slobster" }
+
+[build-dependencies]
+rustc_version = { version = "*" }

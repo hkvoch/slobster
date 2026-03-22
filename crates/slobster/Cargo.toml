@@ -1,0 +1,23 @@
+[package]
+name = "slobster"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+categories.workspace = true
+license.workspace = true
+repository.workspace = true
+readme.workspace = true
+rust-version.workspace = true
+description.workspace = true
+keywords.workspace = true
+
+[dependencies]
+libc = { workspace = true }
+cfg-if = { workspace = true }
+likely_stable = { workspace = true }
+
+[features]
+std = []
+
+[dev-dependencies]
+rstest = { workspace = true }
